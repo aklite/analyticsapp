@@ -7,7 +7,7 @@ import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip } from 'recharts'
 import { AiOutlineArrowUp,AiOutlineArrowDown } from "react-icons/ai"
 const Home = () => {
 
-    const { isAuthenticated } = useAuth0();
+    const { user, isAuthenticated } = useAuth0();
     const [activeTab, setActiveTab] = useState(0);
 
     const { loginWithRedirect } = useAuth0();
@@ -55,10 +55,8 @@ const Home = () => {
             </div>
 
         </div>
-    } else if (isAuthenticated) {
-
-
-    }
+    } 
+    
     return (
         <div className='max-w-7xl pl-4  mx-auto pt-4 mt-4'>
             <div className='border'>
@@ -69,6 +67,11 @@ const Home = () => {
                     Post Insights Dashboard
                 </p>
             </div>
+           {
+            user && <h2>
+                Hello {user.nickname}!
+            </h2>
+           }
             <div className='flex gap-5'>
                 <div>
                     <ul className="tab-list flex">
