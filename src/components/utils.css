@@ -91,6 +91,10 @@ button{
 .pt-4{
     padding-top:1rem;
 }
+.logo-img{
+    width:100px;
+    border:none;
+}
 .mt-4{
     margin-top:1rem;
 }

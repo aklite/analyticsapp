@@ -3,11 +3,11 @@ import "../components/utils.css"
 import "./home.css"
 import { useAuth0 } from "@auth0/auth0-react";
 import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip } from 'recharts';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 import { AiOutlineArrowUp,AiOutlineArrowDown } from "react-icons/ai"
 const Home = () => {
 
-    const { user, isAuthenticated } = useAuth0();
+    const { isAuthenticated } = useAuth0();
     const [activeTab, setActiveTab] = useState(0);
 
     const { loginWithRedirect } = useAuth0();
@@ -36,7 +36,7 @@ const Home = () => {
 
         return <div className='flex mt-5 max-w-5xl mx-auto items-center wrap px-4'>
             <div className='flex-start'>
-                <h1>DATA ANALYTICIS</h1>
+                <h1>DATA ANALYTICS</h1>
                 <p className='font-semibold'>One Stop solution for Social media Analaytics Dashboard
                     Understand how your posts are performing.
                     Our all Services are Free!
