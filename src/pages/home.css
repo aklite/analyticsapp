@@ -1,0 +1,16 @@
+.tab-list li.active-tab {
+    background-color: gray;
+    padding-inline: 1rem;
+    padding-block:0.5rem;
+    color:white;
+  }
+
+.tab-list{
+    list-style: none;
+    gap:1rem;
+    align-items: center;
+}
+
+.border-gray{
+    border:2px solid gray;
+}
